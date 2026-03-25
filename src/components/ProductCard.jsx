@@ -10,7 +10,7 @@ function ProductCard({
   return (
     <Card sx={{ p: 2, borderRadius: 3 }}>
       <img
-        src={imageUrl || "https://via.placeholder.com/150"}
+        src={imageUrl}
         alt={title}
         style={{ width: "100%", borderRadius: "8px" }}
       />
