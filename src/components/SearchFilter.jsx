@@ -1,6 +1,6 @@
 import { TextField, MenuItem, Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-
+import { useState, useEffect } from "react";
 
 function SearchFilter({
   search,
@@ -9,6 +9,16 @@ function SearchFilter({
   setCategory,
 }) {
     const theme = useTheme();
+    const [input, setInput] = useState(search);
+    
+    useEffect(() => {
+    const handler = setTimeout(() => {
+      setSearch(input);
+    }, 500);
+ 
+    return () => clearTimeout(handler); 
+  }, [input]);
+
   return (
     <Box sx={{ display: "flex", gap: "16px", margin: "20px 20px", padding: "16px", border: "2px solid ${theme.palette.divider}", borderRadius: "8px", backgroundColor: theme.palette.mode === "dark" ? "#2a2a2a" : "#f5f5f5", }}>
       <TextField
@@ -35,4 +45,4 @@ function SearchFilter({
     </Box>
   );
 }
-export default SearchFilter
+export default SearchFilter;

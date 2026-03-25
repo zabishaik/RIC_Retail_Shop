@@ -5,7 +5,7 @@ import { removeFromCart, updateQuantity } from "../store/cartSlice";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-export default function CartDrawer({ open, onClose }) {
+function CartDrawer({ open, onClose }) {
   const { items } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -68,3 +68,4 @@ export default function CartDrawer({ open, onClose }) {
     </Drawer>
   );
 }
+export default CartDrawer;

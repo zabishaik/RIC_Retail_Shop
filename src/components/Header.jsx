@@ -1,10 +1,10 @@
-import { AppBar, Toolbar, Typography, Button, IconButton, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, IconButton, Box } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { useTheme } from "@mui/material/styles";
 
-export default function Header({ onCartOpen, toggleTheme }) {
+function Header({ onCartOpen, toggleTheme }) {
 const theme = useTheme();
 
   return (
@@ -31,3 +31,5 @@ const theme = useTheme();
     </AppBar>
   );
 }
+
+export default Header;

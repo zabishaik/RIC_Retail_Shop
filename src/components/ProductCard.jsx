@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography, Button } from "@mui/material";
 
-export default function ProductCard({
+function ProductCard({
   title,
   price,
   imageUrl,
@@ -31,3 +31,4 @@ export default function ProductCard({
     </Card>
   );
 }
+export default ProductCard;
